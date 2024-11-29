@@ -49,7 +49,7 @@ app.use(
 );
 
 // api endpoints
-readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
+readdirSync("./routes").map((r) => app.use("/api", () => "./routes/" + r));
 // app.use("/api/user", userRouter);
 // app.use("/api/product", productRouter);
 // app.use("/api/cart", cartRouter);

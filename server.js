@@ -15,7 +15,7 @@ import orderRouter from "./routes/orderRoute.js";
 
 // App Config
 const app = express();
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 4000;
 
 // Service connections
 connectDB();

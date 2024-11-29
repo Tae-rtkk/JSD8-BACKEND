@@ -2,7 +2,6 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
-import { readdirSync } from "fs";
 
 // Step 2
 import connectDB from "./config/mongodb.js";
@@ -49,11 +48,10 @@ app.use(
 );
 
 // api endpoints
-readdirSync("./routes").map((r) => app.use("/api", () => "./routes/" + r));
-// app.use("/api/user", userRouter);
-// app.use("/api/product", productRouter);
-// app.use("/api/cart", cartRouter);
-// app.use("/api/order", orderRouter);
+app.use("/api/user", userRouter);
+app.use("/api/product", productRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => res.send("API Working"));
 

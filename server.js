@@ -25,9 +25,10 @@ app.use(express.json());
 
 // Define the list of allowed origins
 const allowedOrigins = [
-  "https://artnakkk-frontend-admin.vercel.app",
+  "https://admin-seven-coral.vercel.app",
   "http://localhost:5175", // For local development
   "http://localhost:5176", // For local development
+  "http://localhost:5173", // For local development
 ];
 
 // Configure CORS
